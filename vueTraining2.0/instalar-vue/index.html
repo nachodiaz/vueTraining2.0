@@ -11,11 +11,12 @@
     <h1></h1>
 
     <div id="miApp">
-
+        <h1>{{ mensaje}}</h1>  
     </div>
 
     <script>
         new Vue({
+            el: '#miApp',
             data: {
                 mensaje: 'Hola Mundo'
             }
