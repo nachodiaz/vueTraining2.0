@@ -1,43 +1,35 @@
 <template>
-    <div class="MiComponente">
-        <div class="container">
-            <h1>Libros</h1>
-            <br>
-            <h1>{{libro.titulo}}</h1>
-            <h2>{{libro.autor}}</h2>
-            <p>{{libro.comentarios.user}}</p>
-            
-            <h1>{{libro2.titulo}}</h1>
-            <h2>{{libro2.autor}}</h2>
-        </div>
+    <div class="container" id="MiComponente">
+        <h1>Lista de Colores</h1>
+        <ul>
+            <li v-for="color in colores" :key="(color, index)">
+              Nombre en español: {{color.nombreEnEspañol}}
+            </li>
+            <hr>
+             <li v-for="color in colores" :key="(color, index)">
+              Nombre en español: {{color.nombreEnIngles}}
+            </li>
+        </ul>
+        
     </div>
 </template>
 
 <script>
 export default {
-    name: 'MiComponente',
+    name: "MiComponente",
     data(){
         return {
-            libro: {
-                autor: "Donald Normam",
-                titulo: "Psicología de los objetos cotidianos",
-                comentarios: {
-                    user : 'Excelente libro'
-                }
-            },
-            libro2: {
-                autor: "Dieter Rams",
-                titulo: "less bus better",
-                comentarios: {
-                    user : 'Excelente libro'
-                }
-            }
-        }
+            colores:[
+                {nombreEnEspañol: "rojo", nombreEnIngles:"red" },
+                {nombreEnEspañol: "amarillo", nombreEnIngles:"yewllow" },
+                {nombreEnEspañol: "rosado", nombreEnIngles:"pink" },
+                {nombreEnEspañol: "azul", nombreEnIngles:"blue" },
+            ]
+        };
     }
-
 }
 </script>
 
-<style lang="">
-   
+<style>
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <MiComponente />
   </div>
 </template>
@@ -18,12 +18,13 @@ export default {
 <style>
 #app {
  
-}
-body{
-  width: 90%;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 
-.container{
-  padding:2% 2% 2%;
-}
+ 
 </style>
